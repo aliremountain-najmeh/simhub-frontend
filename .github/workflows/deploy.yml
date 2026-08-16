@@ -54,8 +54,8 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-         tags: ${{ secrets.DOCKERHUB_USERNAME }}/simhub-frontend:v2
-          no-cache: true  # 👈 این خط باعث می‌شود داکر از کش استفاده نکند و نسخه‌ی جدید Node.js را بگیرد
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/simhub-frontend:v2
+          no-cache: true
           
       - name: 🌐 Trigger Server Deployment (Webhook)
         run: |
